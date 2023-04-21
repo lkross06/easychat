@@ -14,13 +14,17 @@ from sklearn.model_selection import train_test_split
 from nltk import WordNetLemmatizer
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
+from nltk.corpus import wordnet
 from nltk import FreqDist
 
 #TODO: when we are done, make a list of all the corpora we need to download from nltk so user doesnt have to download all of nltk
 
 class Chatbot:
     def __init__(self):
-        pass
+        print("-" * 40)
+        print("Speaking with chatbot. Type \"quit\" to end conversation.")
+        print("-" * 40)
+        self.converse()
 
     '''PRE-PROCESSING FUNCTIONS'''
 
@@ -30,16 +34,28 @@ class Chatbot:
     
     #gets POS for a word and returns as valid input for lemmatizer
     def getpos(self, word): #word = word in a string
-        pos = nltk.pos_tag(word)
-        if str(pos).startswith("N"):
-            return "n"
+        pos = str(nltk.pos_tag([word])[0][1])
+        if pos.startswith('J'):
+            return wordnet.ADJ
+        elif pos.startswith('V'):
+            return wordnet.VERB
+        elif pos.startswith('N'):
+            return wordnet.NOUN
+        elif pos.startswith('R'):
+            return wordnet.ADV
+        else:          
+            return wordnet.NOUN #default for lemmatize = noun
+        
+        #TODO: finish this function
 
     #returns list of tokenized words in their root forms based on part of speech
     def lemmatize(self, words): #words = array of tokenized words
         lemmatizer = WordNetLemmatizer()
         rtn = []
         for word in words:
-            rtn += lemmatizer.lemmatize(word, pos=self.getpos(word))
+            pos = self.getpos(word)
+            rtn.append(lemmatizer.lemmatize(word, pos=pos))
+        return rtn
 
     #filters through tokenized words and removes "stop words" (i.e. unimportant words like "a" or "the" or "an")
     def filter_stopwords(self, words): #words = array of tokenized words
@@ -70,17 +86,18 @@ class Chatbot:
 
     '''UI FUNCTIONS'''
 
+    def converse(self): #actual user interaction function
+        userin = input() #automatically waits for input
+        if userin != "quit": #stop if user types "quit"
 
-quote = """
-Men like Schiaparelli watched the red planet—it is odd, by-the-bye, that
-for countless centuries Mars has been the star of war—but failed to
-interpret the fluctuating appearances of the markings they mapped so well.
-All that time the Martians must have been getting ready.
+            #pre-process the user info
+            tokens = self.filter_stopwords(self.tokenize(userin)) #[token, token, token]
+            ne = self.get_ne(tokens) #[(token, NE type), (token, NE type)]
+            lemmas = self.lemmatize(tokens) #[root, root, root]
+            print(lemmas)
 
-During the opposition of 1894 a great light was seen on the illuminated
-part of the disk, first at the Lick Observatory, then by Perrotin of Nice,
-and then by other observers. English readers heard of it first in the
-issue of Nature dated August 2.""" #this is just a test quote dont worry abt it
+            print(">>> chatbot reponse")
+
+            self.converse() #recurse
 
 chatbot = Chatbot()
-chatbot.show_freqdist(quote)
