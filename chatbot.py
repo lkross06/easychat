@@ -2,6 +2,7 @@
 
 #import libraries
 import nltk
+import tree
 import random
 from nltk.chat.util import Chat, reflections
 import math
@@ -11,6 +12,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
 from nltk import WordNetLemmatizer
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
@@ -83,6 +85,16 @@ class Chatbot:
         dist.plot(20, cumulative=True)
 
     '''ML FUNCTIONS'''
+
+    def decide(self):
+        bag_of_words = CountVectorizer(max_df=0.90, min_df=2, max_features=1000, stop_words='english')
+        '''
+        TODO:
+        - get a list of words that indicate positive, negative, neutral (marked)
+        - make decision tree with supervised learning
+        - apply tree to user word based on each word
+        '''
+
 
     '''UI FUNCTIONS'''
 
