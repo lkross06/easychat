@@ -2,7 +2,7 @@
 
 #import libraries
 import nltk
-import tree
+# import tree
 import random
 from nltk.chat.util import Chat, reflections
 import math
@@ -23,10 +23,7 @@ from nltk import FreqDist
 
 class Chatbot:
     def __init__(self):
-        print("-" * 40)
-        print("Speaking with chatbot. Type \"quit\" to end conversation.")
-        print("-" * 40)
-        self.converse()
+        pass
 
     '''PRE-PROCESSING FUNCTIONS'''
 
@@ -97,6 +94,12 @@ class Chatbot:
 
 
     '''UI FUNCTIONS'''
+    
+    def start_converse(self):
+        print("-" * 40)
+        print("Speaking with chatbot. Type \"quit\" to end conversation.")
+        print("-" * 40)
+        self.converse()
 
     def converse(self): #actual user interaction function
         userin = input() #automatically waits for input
@@ -113,3 +116,4 @@ class Chatbot:
             self.converse() #recurse
 
 chatbot = Chatbot()
+chatbot.start_converse()

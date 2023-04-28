@@ -28,7 +28,6 @@ def import_data(): #imports dataset and splits in train-test split
     return [df, df_patterns, df_responses]
 
 
-
 def get_tree():
     t = DecisionTreeClassifier(
         criterion="gini", 
