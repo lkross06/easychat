@@ -12,9 +12,9 @@
                       "Hya there"
                 ],
                 "responses": [
-                      "Hi human, please tell me your GeniSys user",
-                      "Hello human, please tell me your GeniSys user",
-                      "Hola human, please tell me your GeniSys user"
+                      "Hi human, ",
+                      "Hello human, ",
+                      "Hola human, "
                 ],
                 "extension":  {
                       "function": "",
@@ -32,31 +32,31 @@
           {
                 "intent": "GreetingResponse",
                 "text": [
-                      "My user is Adam",
-                      "This is Adam",
-                      "I am Adam",
-                      "It is Adam",
-                      "My user is Bella",
-                      "This is Bella",
-                      "I am Bella",
-                      "It is Bella"
+                      "My name is chatbot",
+                      "This is chatbot",
+                      "I am chatbot",
+                      "It is chatbot",
+                      "My name is chatbot",
+                      "This is chatbot",
+                      "I am chatbot",
+                      "It is chatbot"
                 ],
                 "responses": [
-                      "Great! Hi <HUMAN>! How can I help?",
-                      "Good! Hi <HUMAN>, how can I help you?",
-                      "Cool! Hello <HUMAN>, what can I do for you?",
-                      "OK! Hola <HUMAN>, how can I help you?",
-                      "OK! hi <HUMAN>, what can I do for you?"
+                      "Great! Hi! How can I help?",
+                      "Good! Hi, how can I help you?",
+                      "Cool! Hello, what can I do for you?",
+                      "OK! Hola, how can I help you?",
+                      "OK! hi, what can I do for you?"
                 ],
                 "extension":  {
                       "function": "extensions.gHumans.updateHuman",
                       "entities": true,
                       "responses": [
-                            "Hi %%HUMAN%%! How can I help?",
-                            "Hi %%HUMAN%%, how can I help you?",
-                            "Hello %%HUMAN%%, what can I do for you?",
-                            "Hola %%HUMAN%%, how can I help you?",
-                            "OK hi %%HUMAN%%, what can I do for you?"
+                            "Hi! How can I help?",
+                            "Hi, how can I help you?",
+                            "Hello, what can I do for you?",
+                            "Hola, how can I help you?",
+                            "OK hi, what can I do for you?"
                       ]
                 },
                 "context":  {
@@ -120,13 +120,13 @@
                       "Hello hope you are doing well?"
                 ],
                 "responses": [
-                      "Hello, I am great, how are you? Please tell me your GeniSys user",
-                      "Hello, how are you? I am great thanks! Please tell me your GeniSys user",
-                      "Hello, I am good thank you, how are you? Please tell me your GeniSys user",
-                      "Hi, I am great, how are you? Please tell me your GeniSys user",
-                      "Hi, how are you? I am great thanks! Please tell me your GeniSys user",
-                      "Hi, I am good thank you, how are you? Please tell me your GeniSys user",
-                      "Hi, good thank you, how are you? Please tell me your GeniSys user"
+                      "Hello, I am great, how are you? ",
+                      "Hello, how are you? I am great thanks! ",
+                      "Hello, I am good thank you, how are you? ",
+                      "Hi, I am great, how are you? ",
+                      "Hi, how are you? I am great thanks! ",
+                      "Hi, I am good thank you, how are you? ",
+                      "Hi, good thank you, how are you? "
                 ],
                 "extension":  {
                       "function": "",
@@ -144,31 +144,31 @@
           {
                 "intent": "CourtesyGreetingResponse",
                 "text": [
-                      "Good thanks! My user is Adam",
-                      "Good thanks! This is Adam",
-                      "Good thanks! I am Adam",
-                      "Good thanks! It is Adam",
-                      "Great thanks! My user is Bella",
-                      "Great thanks! This is Bella",
-                      "Great thanks! I am Bella",
-                      "Great thanks! It is Bella"
+                      "Good thanks! My name is chatbot",
+                      "Good thanks! This is chatbot",
+                      "Good thanks! I am chatbot",
+                      "Good thanks! It is chatbot",
+                      "Great thanks! My name is chatbot",
+                      "Great thanks! This is chatbot",
+                      "Great thanks! I am chatbot",
+                      "Great thanks! It is chatbot"
                 ],
                 "responses": [
-                      "Great! Hi <HUMAN>! How can I help?",
-                      "Good! Hi <HUMAN>, how can I help you?",
-                      "Cool! Hello <HUMAN>, what can I do for you?",
-                      "OK! Hola <HUMAN>, how can I help you?",
-                      "OK! hi <HUMAN>, what can I do for you?"
+                      "Great! Hi! How can I help?",
+                      "Good! Hi, how can I help you?",
+                      "Cool! Hello, what can I do for you?",
+                      "OK! Hola, how can I help you?",
+                      "OK! hi, what can I do for you?"
                 ],
                 "extension":  {
                       "function": "extensions.gHumans.updateHuman",
                       "entities": true,
                       "responses": [
-                            "Great %%HUMAN%%! How can I help?",
-                            "Good %%HUMAN%%, how can I help you?",
-                            "Cool %%HUMAN%%, what can I do for you?",
-                            "OK %%HUMAN%%, how can I help you?",
-                            "OK hi %%HUMAN%%, what can I do for you?"
+                            "Great! How can I help?",
+                            "Good, how can I help you?",
+                            "Cool, what can I do for you?",
+                            "OK, how can I help you?",
+                            "OK hi, what can I do for you?"
                       ]
                 },
                 "context":  {
@@ -232,20 +232,20 @@
                       "Tell me my name"
                 ],
                 "responses": [
-                      "You are <HUMAN>! How can I help?",
-                      "Your name is  <HUMAN>, how can I help you?",
-                      "They call you <HUMAN>, what can I do for you?",
-                      "Your name is <HUMAN>, how can I help you?",
-                      "<HUMAN>, what can I do for you?"],
+                      "You are! How can I help?",
+                      "Your name is , how can I help you?",
+                      "They call you, what can I do for you?",
+                      "Your name is, how can I help you?",
+                      "What can I do for you?"],
                 "extension":  {
                       "function": "extensions.gHumans.getCurrentHuman",
                       "entities": false,
                       "responses": [
-                            "You are %%HUMAN%%! How can I help?",
-                            "Your name is  %%HUMAN%%, how can I help you?",
-                            "They call you %%HUMAN%%, what can I do for you?",
-                            "Your name is %%HUMAN%%, how can I help you?",
-                            "%%HUMAN%%, what can I do for you?"
+                            "You are! How can I help?",
+                            "Your name is __, how can I help you?",
+                            "They call you, what can I do for you?",
+                            "Your name is __, how can I help you?",
+                            "What can I do for you?"
                       ]
                 },
                 "context":  {
@@ -267,9 +267,9 @@
                       "Tell me your name?"
                 ],
                 "responses": [
-                      "You can call me Geni",
-                      "You may call me Geni",
-                      "Call me Geni"
+                      "You can call me chatbot",
+                      "You may call me chatbot",
+                      "Call me chatbot"
                 ],
                 "extension":  {
                       "function": "",
@@ -296,9 +296,9 @@
                       "Your real name please?"
                 ],
                 "responses": [
-                      "My name is GeniSys",
-                      "GeniSys",
-                      "My real name is GeniSys" 
+                      "My name is chatbot",
+                      "chatbot",
+                      "My real name is chatbot" 
                 ],
                 "extension":  {
                       "function": "",
@@ -333,9 +333,9 @@
                       "function": "extensions.gTime.getTime",
                       "entities": false,
                       "responses": [
-                            "The time is %%TIME%%",
-                            "Right now it is %%TIME%%",
-                            "It is around %%TIME%%"
+                            "The time is __",
+                            "Right now it is __",
+                            "It is around __"
                       ]
                 },
                 "context":  {
@@ -558,9 +558,9 @@
                       "function": "extensions.gHumans.getHumanByFace",
                       "entities": false,
                       "responses": [
-                            "Hi %%HUMAN%%, how are you?",
-                            "I believe you are %%HUMAN%%, how are you?",
-                            "You are %%HUMAN%%, how are you doing?"
+                            "Hi, how are you?",
+                            "I believe you are, how are you?",
+                            "You are, how are you doing?"
                       ]
                 },
                 "context":  {
@@ -578,7 +578,7 @@
                       "You are a very clever girl",
                       "You are very intelligent",
                       "You are a very intelligent girl",
-                      "You are a genious",
+                      "You are a chatbotous",
                       "Clever girl",
                       "Genious"
                 ],
