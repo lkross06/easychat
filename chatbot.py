@@ -115,5 +115,5 @@ class Chatbot:
 
             self.converse() #recurse
 
-chatbot = Chatbot()
-chatbot.start_converse()
+# chatbot = Chatbot()
+# chatbot.start_converse()
