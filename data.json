@@ -12,9 +12,9 @@
                       "Hya there"
                 ],
                 "responses": [
-                      "Hi human, ",
-                      "Hello human, ",
-                      "Hola human, "
+                      "Hi how are you?",
+                      "Hello",
+                      "Hey"
                 ],
                 "extension":  {
                       "function": "",
@@ -415,7 +415,7 @@
                       "Know what I mean"
                 ],
                 "responses": [
-                      "Well I would not be a very clever AI if I did not would I?",
+                      "Yes! Any intelligent AI would as well.",
                       "I read you loud and clear!",
                       "I do in deed!"
                 ],

@@ -21,11 +21,14 @@ from nltk import FreqDist
 
 #TODO: when we are done, make a list of all the corpora we need to download from nltk so user doesnt have to download all of nltk
 
-class Chatbot:
+class NLP:
     def __init__(self):
         pass
 
     '''PRE-PROCESSING FUNCTIONS'''
+
+    def getlemmas(self, string): #simplified function
+        return self.lemmatize(self.tokenize(string))
 
     #returns an array of tokenized words (each slot is one word/proper noun phrase/punctuation)
     def tokenize(self, string): #string = string of words
@@ -72,48 +75,3 @@ class Chatbot:
                 for n in t:
                     rtn.append((n[0], t.label())) #n[0] = word, n[1] = pos tag
         return rtn
-
-    '''VISUALIZATION FUNCTIONS'''
-
-    #shows a frequency distribution of words in the text with stop word filter
-    def show_freqdist(self, string): #string = raw string of words
-        string = self.filter_stopwords(self.tokenize(string)) #remove stop words
-        dist = FreqDist(string)
-        dist.plot(20, cumulative=True)
-
-    '''ML FUNCTIONS'''
-
-    def decide(self):
-        bag_of_words = CountVectorizer(max_df=0.90, min_df=2, max_features=1000, stop_words='english')
-        '''
-        TODO:
-        - get a list of words that indicate positive, negative, neutral (marked)
-        - make decision tree with supervised learning
-        - apply tree to user word based on each word
-        '''
-
-
-    '''UI FUNCTIONS'''
-    
-    def start_converse(self):
-        print("-" * 40)
-        print("Speaking with chatbot. Type \"quit\" to end conversation.")
-        print("-" * 40)
-        self.converse()
-
-    def converse(self): #actual user interaction function
-        userin = input() #automatically waits for input
-        if userin != "quit": #stop if user types "quit"
-
-            #pre-process the user info
-            tokens = self.filter_stopwords(self.tokenize(userin)) #[token, token, token]
-            ne = self.get_ne(tokens) #[(token, NE type), (token, NE type)]
-            lemmas = self.lemmatize(tokens) #[root, root, root]
-            print(lemmas)
-
-            print(">>> chatbot reponse")
-
-            self.converse() #recurse
-
-# chatbot = Chatbot()
-# chatbot.start_converse()
