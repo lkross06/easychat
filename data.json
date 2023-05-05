@@ -50,6 +50,8 @@
             {
                   "intent": "CourtesyGreeting",
                   "text": [
+                        "Good how are you?",
+                        "I'm good how are you?",
                         "How are you?",
                         "Hi how are you?",
                         "Hello how are you?",
@@ -99,7 +101,7 @@
                         "Tell me my name"
                   ],
                   "responses": [
-                        "You are! How can I help?",
+                        "You are <name>! How can I help?",
                         "Your name is <name>, how can I help you?",
                         "They call you, what can I do for you?",
                         "Your name is <name>, how can I help you?",
@@ -152,7 +154,7 @@
                   "responses": [
                         "OK",
                         "No problem",
-                        "Right"
+                        "Cool"
                   ]
             },
             {

@@ -1,23 +1,8 @@
-#Lucas Ross and Finn Taylor 19 Apr 2023
-
 #import libraries
 import nltk
-# import tree
-import random
-from nltk.chat.util import Chat, reflections
-import math
-import numpy as np
-import pandas as pd
-from matplotlib import pyplot as plt
-import seaborn as sns
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer
 from nltk import WordNetLemmatizer
-from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.corpus import wordnet
-from nltk import FreqDist
 
 #TODO: when we are done, make a list of all the corpora we need to download from nltk so user doesnt have to download all of nltk
 
