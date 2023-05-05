@@ -3,6 +3,8 @@
 ### Lucas Ross and Finn Taylor
 ### Design Project May 5, 2023
 
+`https://github.com/lkross06/easychat`
+
 This program creates a chatbot that responds to user messages in the terminal. Using a dataset that categorizes
 certain phrases by their intent, a decision tree model was constructed to classify collections of words by
 intent, and the chatbot took a response from the dataset to respond. The chatbot uses the __Natural Language Processing Toolkit (NLTK)__ library to process individual words.
