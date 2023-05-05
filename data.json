@@ -135,9 +135,7 @@
                         "Time"
                   ],
                   "responses": [
-                        "One moment",
-                        "One sec",
-                        "One second"
+                        "The time is <time>"
                   ]
             },
             {
