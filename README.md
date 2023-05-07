@@ -9,6 +9,8 @@ This program creates a chatbot that responds to user messages in the terminal. U
 certain phrases by their intent, a decision tree model was constructed to classify collections of words by
 intent, and the chatbot took a response from the dataset to respond. The chatbot uses the __Natural Language Processing Toolkit (NLTK)__ library to process individual words.
 
+BEFORE RUNNING ANY FILE, run ``pip install -r requirements.txt`` in the terminal to install dependencies.
+
 **Directory Contents**:
 - ``chatbot.py`` main file!! runs a chatbot conversation in the terminal
 - ``chatbot.ipynb`` same as chatbot.py, but with visualizations of datasets and decision tree models
